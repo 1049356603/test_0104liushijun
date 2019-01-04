@@ -1,0 +1,24 @@
+{
+    "name": "test_0104liushijun",
+    "version": "1.0.0",
+    "description": "日考0104",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/1049356603/test_0104liushijun.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/1049356603/test_0104liushijun/issues"
+    },
+    "homepage": "https://github.com/1049356603/test_0104liushijun#readme",
+    "devDependencies": {
+        "gulp": "^4.0.0",
+        "gulp-webserver": "*"
+    }
+}

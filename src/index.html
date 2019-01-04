@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/require.js"></script>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .aa {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">1111</div>
+
+
+    <script>
+        var box = document.querySelector("#box");
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", "/data", "true");
+        xhr.responseType = "json";
+        xhr.send();
+        xhr.onload = function(res) {
+            if (res.target.status == 200) {
+                var data = res.target.response.data;
+                console.log(data);
+                var str = "";
+                data.forEach(function(file) {
+                    str += `<div class="aa">
+                                <h3>${file.title}</h3>
+                                <img src="${file.img}" alt="">
+                                <p>${file.price}元</p>
+                            </div>`;
+                })
+
+                box.innerHTML = str;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
